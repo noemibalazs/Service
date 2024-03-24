@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Service</string>
+
+    <string name="label_work_manager">Work Manager</string>
+    <string name="label_download_manager">Download Manager</string>
+    <string name="label_alarm_manager">Alarm Manager</string>
+    <string name="label_foreground_service">ForeGround Service</string>
+    <string name="label_order_lunch">Order Lunch</string>
+
+    <string name="label_choose_photo">Choose a photo</string>
+    <string name="label_upload">Upload</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_uploaded_photo">Uploaded photo</string>
+
+    <string name="label_download_photo">Download photo</string>
+    <string name="label_set_alarm">Set alarm</string>
+    <string name="label_your_daily_alarm_toast">Your daily alarm is set at %s hour to order your lunch.</string>
+    <string name="label_notification_title">Lunch alarm</string>
+    <string name="label_notification_content">It\'s time to order your lunch!\nJust click on the dial button!</string>
+    <string name="label_play_music">Start foreground service</string>
+    <string name="label_artist"><b>Artist</b>: Michael Jackson</string>
+    <string name="label_song"><b>Song</b>: Who is it</string>
+    <string name="label_error">Try it again, something went wrong!</string>
+    <string name="label_error_missing_sim">SIM card is missing, please insert one and try again!</string>
+</resources>

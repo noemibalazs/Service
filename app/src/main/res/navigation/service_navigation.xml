@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/service_navigation"
+    app:startDestination="@id/fragmentAlarmManager">
+
+    <fragment
+        android:id="@+id/fragmentAlarmManager"
+        android:name="com.noemi.service.alarm.FragmentAlarmManager"
+        android:label="Alarm Manager"
+        tools:layout="@layout/fragment_alarm_manager" />
+
+    <fragment
+        android:id="@+id/fragmentDownloadManager"
+        android:name="com.noemi.service.download.FragmentDownloadManager"
+        android:label="Download Photo Manager"
+        tools:layout="@layout/fragment_download_manager" />
+
+    <fragment
+        android:id="@+id/fragmentForegroundService"
+        android:name="com.noemi.service.foreground.FragmentForegroundService"
+        android:label="Foreground Service"
+        tools:layout="@layout/fragment_foreground_service" />
+
+    <fragment
+        android:id="@+id/fragmentSelectPhoto"
+        android:name="com.noemi.service.workmanager.selectphoto.FragmentSelectPhoto"
+        android:label="Select Photo"
+        tools:layout="@layout/fragment_select_photo">
+
+        <action
+            android:id="@+id/actionToUploadPhoto"
+            app:destination="@id/fragmentUploadPhoto" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentUploadPhoto"
+        android:name="com.noemi.service.workmanager.uploadphoto.FragmentUploadPhoto"
+        android:label="Upload Photo"
+        tools:layout="@layout/fragment_upload_photo">
+
+        <argument
+            android:name="photoPath"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+
+</navigation>

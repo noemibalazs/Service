@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/icon_size_large"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/artistContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_xxxlarge">
+
+        <TextView
+            android:id="@+id/artistTextView"
+            style="@style/MediumItalicTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="@dimen/padding_large"
+            android:layout_marginTop="@dimen/padding_large"
+            android:text="@string/label_artist" />
+
+        <TextView
+            android:id="@+id/songTextView"
+            style="@style/MediumItalicTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/artistTextView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="@dimen/padding_large"
+            android:layout_marginTop="@dimen/padding_tiny"
+            android:text="@string/label_song" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_margin="@dimen/padding_large">
+
+        <ImageView
+            android:id="@+id/playIcon"
+            android:layout_width="@dimen/icon_size_medium"
+            android:layout_height="@dimen/icon_size_medium"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_play" />
+
+        <ImageView
+            android:id="@+id/pauseIcon"
+            android:layout_width="@dimen/icon_size_medium"
+            android:layout_height="@dimen/icon_size_medium"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_pause" />
+
+        <ImageView
+            android:id="@+id/stopIcon"
+            android:layout_width="@dimen/icon_size_medium"
+            android:layout_height="@dimen/icon_size_medium"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_stop" />
+
+    </RelativeLayout>
+
+</LinearLayout>
