@@ -9,7 +9,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.noemi.service.R
 import com.noemi.service.databinding.ActivityProviderBinding
-import com.noemi.service.source.ServiceSourceActivity.Companion.ITEM_CODE
+import com.noemi.service.source.ServiceSourceActivity.Companion.SERVICE_NAME
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -26,13 +26,11 @@ class ProviderActivity : AppCompatActivity() {
 
         navController = Navigation.findNavController(this, R.id.nav_host_fragment_container)
 
-        val code = intent.getIntExtra(ITEM_CODE, 0)
-
-        when (code) {
-            3 -> navController.navigate(R.id.fragmentSelectPhoto)
-            6 -> navController.navigate(R.id.fragmentDownloadManager)
-            12 -> navController.navigate(R.id.fragmentForegroundService)
-            9 -> Log.d(TAG, "Landed on the start destination.")
+        when (intent.getIntExtra(SERVICE_NAME, 0)) {
+            R.string.label_work_manager -> navController.navigate(R.id.fragmentSelectPhoto)
+            R.string.label_download_manager -> navController.navigate(R.id.fragmentDownloadManager)
+            R.string.label_foreground_service -> navController.navigate(R.id.fragmentForegroundService)
+            R.string.label_alarm_manager -> Log.d(TAG, "Landed on the start destination.")
         }
     }
 

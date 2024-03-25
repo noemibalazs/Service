@@ -73,12 +73,12 @@ class ServiceSourceActivity : AppCompatActivity(), ServiceClickListener {
     }
 
     override fun onItemClicked(item: ServiceItem) {
-        launchProvider(item.code)
+        launchProvider(item)
     }
 
-    private fun launchProvider(code: Int) {
+    private fun launchProvider(item: ServiceItem) {
         val intent = Intent(this, ProviderActivity::class.java)
-        intent.putExtra(ITEM_CODE, code)
+        intent.putExtra(SERVICE_NAME, item.name)
         startActivity(intent)
     }
 
@@ -88,6 +88,6 @@ class ServiceSourceActivity : AppCompatActivity(), ServiceClickListener {
     }
 
     companion object {
-        const val ITEM_CODE = "item code"
+        const val SERVICE_NAME = "service name"
     }
 }
